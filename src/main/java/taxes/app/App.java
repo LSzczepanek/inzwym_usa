@@ -1,9 +1,11 @@
 package taxes.app;
 
-import java.io.FileWriter;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 
-import au.com.bytecode.opencsv.CSVWriter;
+import au.com.bytecode.opencsv.CSVReader;
+import au.com.bytecode.opencsv.bean.CsvToBean;
 
 public class App 
 {
@@ -14,15 +16,13 @@ public class App
     }
     
     public App(){
-
-        FileWriter fileWriter;
 		try {
-			fileWriter = new FileWriter("data.csv", true);
-			CSVWriter writer = new CSVWriter(fileWriter);
+		     CSVReader csvReader = new CSVReader(new FileReader("StanyZPodatkami.csv"));
+
+		      CsvToBean csv = new CsvToBean();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
     }
-    
-    
+      
 }
