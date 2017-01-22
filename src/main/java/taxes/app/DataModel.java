@@ -7,5 +7,5 @@ public interface DataModel {
     List<String> getStates();
 
     List<String> getCategories();
-    List<String> getProducts();
+    List<String> getProducts(String category);
 }

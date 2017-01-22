@@ -29,7 +29,11 @@ public class MainView extends JFrame {
 		priceBase.setText("price");
 		dataModel.getStates().forEach(state -> states.addItem(state));
         dataModel.getCategories().forEach(state -> category.addItem(state));
-		dataModel.getProducts().forEach(product -> products.addItem(product));
+		category.addActionListener(a -> {
+			System.out.println("selected category item:"+category.getSelectedItem().toString());
+			products.removeAllItems();
+			dataModel.getProducts(category.getSelectedItem().toString()).forEach(product -> products.addItem(product));
+		});
 		setVisible(true);
 	}
 

@@ -1,7 +1,9 @@
 package taxes.app;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class DummyDataModel implements DataModel{
 
@@ -16,15 +18,16 @@ public class DummyDataModel implements DataModel{
 	}
 
 	@Override
-	public List<String> getProducts() {
-
-		List<String> myList = new ArrayList<String>();
-		myList.add("Maslo");
-		myList.add("Kaszanka");
-		myList.add("Twarog");
-		myList.add("Ser");
-		myList.add("Czekolada");
-		return myList;
+	public List<String> getProducts(String category) {
+		Map<String, List<String>> categories = new HashMap<>();
+		List<String> groceries = new ArrayList<>();
+		groceries.add("Maslo");
+		groceries.add("Kaszanka");
+		groceries.add("Twarog");
+		groceries.add("Ser");
+		groceries.add("Czekolada");
+		categories.put("Groceries", groceries);
+		return categories.getOrDefault(category, new ArrayList<>());
 	}
 
 	@Override
