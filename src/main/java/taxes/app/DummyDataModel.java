@@ -27,6 +27,13 @@ public class DummyDataModel implements DataModel{
 		groceries.add("Ser");
 		groceries.add("Czekolada");
 		categories.put("Groceries", groceries);
+
+
+		List<String> preparedFood = new ArrayList<>();
+		preparedFood.add("zuupa pomidorowa");
+		preparedFood.add("czarnina");
+
+		categories.put("Prepared food", preparedFood);
 		return categories.getOrDefault(category, new ArrayList<>());
 	}
 
