@@ -11,6 +11,7 @@ public class MainView extends JFrame {
 	private JComboBox<String> states = new JComboBox<>();
 	private JComboBox<String> products = new JComboBox<>();
 	private JComboBox<String> category = new JComboBox<>();
+	private JTextField priceBase = new JTextField();
 
 	public MainView(DataModel dataModel) {
 		super("Hello World");
@@ -22,7 +23,10 @@ public class MainView extends JFrame {
 		add(states);
 		add(products);
 		add(category);
+		add(priceBase);
 
+		priceBase.setEnabled(false);
+		priceBase.setText("price");
 		dataModel.getStates().forEach(state -> states.addItem(state));
         dataModel.getCategories().forEach(state -> category.addItem(state));
 		dataModel.getProducts().forEach(product -> products.addItem(product));
