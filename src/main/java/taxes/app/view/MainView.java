@@ -23,9 +23,9 @@ public class MainView extends JFrame {
 		setLayout(new GridLayout(3, 2));
 		add(states);
 		add(priceWithTax);
+        add(category);
 		add(products);
 		add(priceBase);
-		add(category);
 
 		priceWithTax.setEnabled(false);
 		priceWithTax.setText("Price with tax");
