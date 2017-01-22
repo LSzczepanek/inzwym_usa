@@ -1,4 +1,5 @@
 target
+.idea/**/*.xml
 .metadata
 bin/
 tmp/
