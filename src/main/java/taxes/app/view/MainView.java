@@ -24,9 +24,8 @@ public class MainView extends JFrame {
 		add(category);
 
 		dataModel.getStates().forEach(state -> states.addItem(state));
+        dataModel.getCategories().forEach(state -> category.addItem(state));
 		dataModel.getProducts().forEach(product -> products.addItem(product));
-		category.addItem("cat1");
-		category.addItem("cat2");
 		setVisible(true);
 	}
 

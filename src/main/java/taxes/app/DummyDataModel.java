@@ -26,4 +26,17 @@ public class DummyDataModel implements DataModel{
 		myList.add("Czekolada");
 		return myList;
 	}
+
+	@Override
+	public List<String> getCategories() {
+		List<String> myList = new ArrayList<String>();
+		myList.add("Groceries");
+		myList.add("Prepared food");
+		myList.add("Prescription drug");
+		myList.add("Non-prescription drug");
+		myList.add("Clothing drug");
+		myList.add("Intangibles");
+		return myList;
+	}
+
 }
