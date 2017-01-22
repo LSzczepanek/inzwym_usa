@@ -11,6 +11,7 @@ public class MainView extends JFrame {
 	private JComboBox<String> states = new JComboBox<>();
 	private JComboBox<String> products = new JComboBox<>();
 	private JComboBox<String> category = new JComboBox<>();
+	private JTextField priceWithTax = new JTextField();
 	private JTextField priceBase = new JTextField();
 
 	public MainView(DataModel dataModel) {
@@ -19,12 +20,15 @@ public class MainView extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(500, 500);
 		setLocation(50,50);
-		setLayout(new GridLayout(3, 3));
+		setLayout(new GridLayout(3, 2));
 		add(states);
+		add(priceWithTax);
 		add(products);
-		add(category);
 		add(priceBase);
+		add(category);
 
+		priceWithTax.setEnabled(false);
+		priceWithTax.setText("Price with tax");
 		priceBase.setEnabled(false);
 		priceBase.setText("price");
 		dataModel.getStates().forEach(state -> states.addItem(state));
