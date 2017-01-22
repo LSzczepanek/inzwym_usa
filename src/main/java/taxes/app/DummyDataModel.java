@@ -7,11 +7,11 @@ public class DummyDataModel implements DataModel{
 
 	public List<String> getStates(){
 		List<String> myList = new ArrayList<String>();
+		myList.add("Alabama");
 		myList.add("Alaska");
-		myList.add("Alaska2");
-		myList.add("Alaska3");
-		myList.add("Alaska4");
-		myList.add("Alaska5");
+		myList.add("Arizona");
+		myList.add("Arkansnas");
+		myList.add("California");
 		return myList;
 	}
 }
