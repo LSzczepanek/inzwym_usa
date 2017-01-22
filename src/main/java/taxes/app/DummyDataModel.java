@@ -14,4 +14,16 @@ public class DummyDataModel implements DataModel{
 		myList.add("California");
 		return myList;
 	}
+
+	@Override
+	public List<String> getProducts() {
+
+		List<String> myList = new ArrayList<String>();
+		myList.add("Maslo");
+		myList.add("Kaszanka");
+		myList.add("Twarog");
+		myList.add("Ser");
+		myList.add("Czekolada");
+		return myList;
+	}
 }
